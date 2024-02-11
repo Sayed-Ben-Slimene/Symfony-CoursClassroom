@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Register</title>
+		<link rel="stylesheet" href="{{ asset('AccountUser/AuthStyle.css') }}">
+	</head>
+	<body>
+		<div class="container">
+			<div class="title">Inscription</div>
+			<div class="content">
+
+
+				<div class="user-details">
+
+					{{ form_errors(registrationForm) }}
+
+					{{ form_start(registrationForm) }}
+
+
+					<div class="input-box">
+						<span class="details">Nom</span>
+						{{ form_row(registrationForm.nom, {'attr': {'class': 'form-style','placeholder':'Entrez votre Nom'}}) }}
+
+
+					</div>
+					<div class="input-box">
+						<span class="details">Prenom</span>
+						{{ form_row(registrationForm.prenom, {'attr': {'class': 'form-style','placeholder':'Entrez votre Prenom'}}) }}
+
+
+					</div>
+					<div class="input-box">
+						<span class="details">Email</span>
+						{{ form_row(registrationForm.email, {'attr': {'class': 'form-style','placeholder':'Entrez votre Email'}}) }}
+
+
+					</div>
+
+					<div class="input-box">
+						<span class="details">Password</span>
+
+						{{ form_row(registrationForm.plainPassword, {'attr': {'class': 'form-style','placeholder':'Entrez votre Password'}}) }}
+
+
+					</div>
+
+					<div class="input-box">
+						<span class="details">Numéro de Téléphone</span>
+						{{ form_row(registrationForm.tel, {'attr': {'class': 'form-style','placeholder':'Entrez votre Téléphone'}}) }}
+
+
+					</div>
+
+
+					{{ form_row(registrationForm.agreeTerms) }}
+
+					<button type="submit" class="button">Register</button>
+
+
+					{{ form_end(registrationForm) }}</div>
+			</div>
+
+			<p>Vous utilisez déjà EDUKATE</p>
+
+			?
+			<a href="{{ path('app_login') }}">Connexion</a>
+		</p>
+		<p>
+			<a href="{{ path('app_home') }}">Retour à la page d'Accueil</a>
+		</p>
+	</body>
+</html></div></body></html>

@@ -1,0 +1,79 @@
+{% extends 'admin/index.html.twig' %}
+
+
+{% block title %}Edit Classe
+{% endblock %}
+{% block  pagetop %}
+	<div id="page_top" class="section-body top_dark">
+		<div
+			class="container-fluid">
+			<!-- page header start-->
+			<div class="page-header">
+				<div class="left">
+					<a href="javascript:void(0)" class="icon menu_toggle mr-3">
+						<i class="fa  fa-align-left"></i>
+					</a>
+					<h1 class="page-title">Create new classe</h1>
+				</div>
+				<div class="right">
+					<div class="input-icon xs-hide mr-4">
+						<input type="text" class="form-control" placeholder="Search for...">
+						<span class="input-icon-addon">
+							<i class="fe fe-search"></i>
+						</span>
+					</div>
+
+				</div>
+			</div>
+			<!-- page header end -->
+		</div>
+	</div>
+{% endblock %}
+
+
+{% block body %}
+
+
+	<div id="main_content">
+		<div class="page-loader-wrapper">
+			<div class="loader"></div>
+		</div>
+		<div class="container-fluid">
+			<div class="row clearfix">
+				<div class="col-lg-12">
+					<div class="card">
+						<div class="card-body">
+							<div class="d-md-flex justify-content-between">
+								<ul class="nav nav-tabs b-none">
+									<li class="nav-item">
+										<i class="fa fa-plus"></i>
+										Edit Classe</li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="main-body">
+				<div class="row">
+					<div class="col-lg-4">
+
+
+						{{ include('classe/_form.html.twig', {'button_label': 'Update'}) }}
+
+
+						{{ include('classe/_delete_form.html.twig') }}
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+{% endblock %}
